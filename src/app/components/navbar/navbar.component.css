@@ -1,0 +1,40 @@
+.navbar {
+    width: 100%;
+    padding: 10px 0;
+    background-color: red;
+    text-align: center;
+    height: 55px;
+}
+
+ol {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    font-size: 32px;
+    height: 40px;
+    line-height: 170%;
+    display: inline-block;
+}
+
+ol > :first-child {
+    border-left: 2px solid darkred;
+}
+
+ol > li {
+    float: left;
+    width: 300px;
+    border-right: 2px solid darkred;
+}
+
+
+
+ol > li:hover {
+    background-color: #fc5d5d;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 10;
+}
