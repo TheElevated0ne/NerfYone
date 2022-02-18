@@ -32,6 +32,11 @@ ol > li:hover {
     background-color: #fc5d5d;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+}
+
 .sticky {
     position: fixed;
     top: 0;

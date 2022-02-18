@@ -7,6 +7,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContentComponent } from './components/content/content.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
+
+const appRoutes: Routes = [
+  {path: '', component: ContentComponent},
+  {path: 'login', component: LoginComponent}
+]
 
 @NgModule({
   declarations: [
@@ -14,11 +21,13 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     NavbarComponent,
     ContentComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes, {enableTracing: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
