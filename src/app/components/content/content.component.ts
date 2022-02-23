@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
+  abilities: string[] = ["P", "Q", "W", "E", "R"]
+
   constructor() { }
 
   ngOnInit(): void {

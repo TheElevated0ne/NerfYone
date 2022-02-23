@@ -1,0 +1,29 @@
+.ability {
+    display: flex;
+    border: 6px solid red;
+    border-radius: 20px;
+    margin: 30px;
+    margin-left: 150px;
+    z-index: 11;
+}
+
+.ability-name {
+    display: inline;
+    float: inline-start;
+    text-align: left;
+    padding: 15px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid red;
+    font-weight: 500;
+    font-size: 25px;
+    z-index: 11;
+}
+
+.description {
+    display: block;
+    padding: 15px;
+    padding-right: 25px;
+    text-align: justify;
+    z-index: 11;
+}

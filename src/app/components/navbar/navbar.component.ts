@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
@@ -19,7 +20,7 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
     handleScroll() {
-      const windowScroll = window.pageYOffset;
+      const windowScroll = window.pageYOffset + 55;
       if(windowScroll >= this.menuPosition){
           this.sticky = true;
       } else {

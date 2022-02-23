@@ -1,10 +1,21 @@
 <div class="content">
-    <p>Ladies and Gentelmens</p>
-    <p>Finally, we got him!</p>
-    <p>PERFECTLY BALANCED</p>
-    <p>CHAMPION</p>
-    <div class="balanced"></div>
-    <img src="assets/img/Yone_Render.png">
-    <div class="abilities"></div>
+    <p>Ladies and Gentelmens!</p>
+    <p>Today i give you opportunity to nerf</p>
+    <div class="balanced">
+        <p>"PERFECTLY BALANCED"</p>
+    </div>
+    <p style="font-size: 50px;">CHAMPION:</p>
+    <div class="yone">
+        <p>YONE</p>
+    </div>
+    <div class="yonestats">
+        <img src="assets/img/Yone_Render.png">
+        <div class="abilities">
+            <div *ngFor="let ability of abilities">
+                <app-yone-basic-abilities [type]="ability"></app-yone-basic-abilities>
+            </div>
+        </div>
+    </div>
+
 </div>
 

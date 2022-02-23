@@ -9,6 +9,7 @@ import { ContentComponent } from './components/content/content.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
+import { YoneBasicAbilitiesComponent } from './components/yone-basic-abilities/yone-basic-abilities.component';
 
 const appRoutes: Routes = [
   {path: '', component: ContentComponent},
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     ContentComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    YoneBasicAbilitiesComponent
   ],
   imports: [
     BrowserModule,
