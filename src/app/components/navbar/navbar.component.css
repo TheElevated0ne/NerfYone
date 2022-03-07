@@ -1,19 +1,22 @@
 .navbar {
+    position: relative;
     width: 100%;
     padding: 10px 0;
     background-color: red;
     text-align: center;
-    height: 55px;
 }
 
 ol {
+    position: relative;
+    left: 50%;
     padding: 0;
     margin: 0;
+    margin-bottom: 12px;
     list-style-type: none;
     font-size: 32px;
     height: 40px;
     line-height: 170%;
-    display: inline-block;
+    display: inline-block;  
 }
 
 ol > :first-child {
@@ -21,6 +24,8 @@ ol > :first-child {
 }
 
 ol > li {
+    position: relative;
+    right: 50%;
     float: left;
     width: 300px;
     border-right: 2px solid darkred;

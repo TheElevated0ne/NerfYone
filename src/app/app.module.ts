@@ -10,6 +10,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { YoneBasicAbilitiesComponent } from './components/yone-basic-abilities/yone-basic-abilities.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { environment } from '../environments/environment';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AuthService } from './services/auth.service';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 const appRoutes: Routes = [
   {path: '', component: ContentComponent},
@@ -24,14 +34,24 @@ const appRoutes: Routes = [
     ContentComponent,
     FooterComponent,
     LoginComponent,
-    YoneBasicAbilitiesComponent
+    YoneBasicAbilitiesComponent,
+    SignInComponent,
+    SignUpComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+    RouterModule.forRoot(appRoutes, {enableTracing: true}),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
