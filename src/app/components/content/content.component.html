@@ -1,5 +1,5 @@
 <div class="content">
-    <p>Ladies and Gentelmens!</p>
+    <p>Welcome {{ user.displayName }}</p>
     <p>Today i give you opportunity to nerf</p>
     <div class="balanced">
         <p>"PERFECTLY BALANCED"</p>
@@ -10,7 +10,7 @@
     </div>
     <div class="yonestats">
         <img src="assets/img/Yone_Render.png">
-        <div class="abilities">
+        <div class="abilities" #fadesIn [class.faded] = "faded">
             <div *ngFor="let ability of abilities">
                 <app-yone-basic-abilities [type]="ability"></app-yone-basic-abilities>
             </div>

@@ -1,0 +1,73 @@
+.displayTable {
+    margin: 100px;
+}
+
+.displayTableCell {
+    width: 400px;
+    margin: auto;
+    padding: 40px;
+    background-color: red;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+input {
+    border: none;
+}
+
+button {
+    border: none;
+}
+
+.formGroup {
+    padding-bottom: 5px;
+}
+
+.formControl {
+    width: 100%;
+}
+
+.btnprimary {
+    cursor: pointer;
+    background-color: #303030;
+    color: red;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.btnprimary:hover {
+    color: white;
+}
+
+.googleBtn {
+    cursor: pointer;
+    background-color: #303030;
+    color: red;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+.googleBtn:hover {
+    color: white;
+}
+
+.redirect {
+    cursor: pointer;
+    background-color: #303030;
+    color: red;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.redirect:hover {
+    color: white;
+}

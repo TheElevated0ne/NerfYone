@@ -32,16 +32,21 @@ img {
 }
 
 .abilities {
-    border: 15px solid white;
-    border-radius: 20px;
+    opacity: 1;
+    transition: all 1000ms ease-out;
+    border:none;
     float: left;
     margin-top: 100px;
-    margin-left: 450px;
+    margin-left: 500px;
     width: 60%;
     height: 850px;
     z-index: 4;
 }
 
+.faded {
+    opacity: 0;
+    transform: translateX(-50%)
+}
 
 @keyframes wiggle{
     0% {transform: rotate(-4deg);}

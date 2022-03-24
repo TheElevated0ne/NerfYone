@@ -1,5 +1,4 @@
-import { ThrowStmt } from '@angular/compiler';
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core'
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +7,7 @@ import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular
 })
 export class NavbarComponent implements OnInit {
 
-  @ViewChild('stickyMenu') menuElement!: ElementRef;
+  @ViewChild('stickyMenu') menuElement!: ElementRef
 
   sticky: boolean = false;
 

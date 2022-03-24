@@ -1,0 +1,18 @@
+<div *ngFor="let message of allMessages | async" class="wrapper">
+    <div class="patchname">
+        <p>{{message.patch.name}}</p>
+    </div>
+    <div *ngFor="let champion of message.patch.champions" class="champion">
+        <p name="champion">{{champion.name}}</p>
+        <p name="overwiev">{{champion.overview}}</p>
+        <div class="quota">
+            <span>"</span>{{champion.quota}}<span>"</span>
+        </div>
+        <div class="ability" *ngFor="let ability of champion.abilities">
+            <p name="abilityName">{{ability.ability_id}}</p>
+            <div class="abilityChanges" *ngFor="let achange of ability.achange">
+                {{achange.change}} <span>: </span> <span class="before">{{achange.before}}</span> <span> => </span> {{achange.after}}
+            </div>
+        </div>
+    </div>
+</div>  

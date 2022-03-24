@@ -1,0 +1,70 @@
+.wrapper {
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 1400px;
+    height: 100%;
+    font-weight: 400;
+    /* border: 5px solid yellow; */
+}
+
+p {
+    border: none;
+    /* border: 3px solid red; */
+    background: none;
+    color: white;
+}
+
+.patchname {
+    display: block;
+    font-size: 70px;
+    width: 100%;
+}
+
+.champion {
+    border: 1px solid rgb(88, 88, 88);
+    padding: 40px;
+    margin-top: 10px;
+}
+
+.champion > p[name="champion"] {
+    display: inline-block;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.champion > p[name="overwiev"] {
+    display: block;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.quota {
+    display: block;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.quota > p[name="quota"] {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.ability {
+    margin: 30px;
+}
+
+.ability > p[name="abilityName"] {
+    display: inline;
+    font-size: 35px;
+}
+
+
+.abilityChanges {
+    margin-bottom: 10px;
+}
+
+.before {
+    text-decoration: line-through;
+}

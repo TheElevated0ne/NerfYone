@@ -16,7 +16,8 @@ export class AuthService {
     public afAuth: AngularFireAuth,
     public router: Router,
     public ngZone: NgZone
-  ) {
+  ) 
+  {
     this.afAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user
@@ -34,10 +35,10 @@ export class AuthService {
     return this.afAuth
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
-        this.ngZone.run(() => {
-          this.router.navigate(['/'])
-        })
         this.SetUserData(result.user)
+        this.ngZone.run(() => {
+          this.router.navigate([''])
+        })
       })
       .catch((error) => {
         window.alert(error.message)
@@ -50,6 +51,9 @@ export class AuthService {
       .then((result) => {
         this.SendVerificationMail()
         this.SetUserData(result.user)
+        this.ngZone.run(() => {
+          this.router.navigate([''])
+        })
       })
       .catch((error)=> {
         window.alert(error.message)
@@ -83,7 +87,7 @@ export class AuthService {
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
       if (res) {
-        this.router.navigate(['/']);
+        this.router.navigate(['']);
       }
     });
   }
@@ -93,7 +97,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['']);
         });
         this.SetUserData(result.user);
       })
@@ -106,6 +110,7 @@ export class AuthService {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(
       `users/${user.uid}`
     );
+
     const userData: User = {
       uid: user.uid,
       email: user.email,

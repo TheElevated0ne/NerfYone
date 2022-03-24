@@ -20,6 +20,8 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AuthService } from './services/auth.service';
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { BalanceComponent } from './components/balance/balance.component';
+import { WallComponent } from './components/wall/wall.component';
 
 const appRoutes: Routes = [
   {path: '', component: ContentComponent},
@@ -37,7 +39,9 @@ const appRoutes: Routes = [
     YoneBasicAbilitiesComponent,
     SignInComponent,
     SignUpComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    BalanceComponent,
+    WallComponent
   ],
   imports: [
     BrowserModule,

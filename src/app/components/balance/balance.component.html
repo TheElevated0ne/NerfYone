@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <div class="patchname">
+        <input type="text" #patchName name="patchName" placeholder="{{patchname}}" (keyup)="onKey(this.patch, patchName.value, 'name')">
+    </div>
+    <div class="champion" *ngFor="let champ of champions">
+        <input type="text" #championName name="champion" placeholder="{{champ.name}}" (keyup)="onKey(champ, championName.value, 'name')">
+        <input type="button" name="add-champion" value="+" (click)="addChampion()">
+        <input type="button" name="remove-champion" value="-" (click)="removeChampion(champ)" *ngIf="champions.length > 1">
+        <input type="text" #overview name="overwiev" placeholder="{{champ.overview}}" (keyup)="onKey(champ, overview.value, 'overview')">
+        <div class="quota">
+            <span>"</span>
+            <input type="text" #quota name="quota" placeholder="{{champ.quota}}" (keyup)="onKey(champ, quota.value, 'quota')">
+            <span>"</span>
+        </div>
+        <div class="ability" *ngFor="let ability of champ.abilities">
+            <input type="text" #abilityName name="abilityName" placeholder="{{ability.ability_id}}" (keyup)="onKey(ability, abilityName.value, 'abilityID')">
+            <input type="button" name="add-ability" value="+" (click)="addAbility(champ)">
+            <input type="button" name="remove-ability" value="-" (click)="removeAbility(champ, ability)" *ngIf="champ.abilities.length > 1">
+            <div class="abilityChanges" *ngFor="let achange of ability.achange">
+                <input type="text" #change name="change" placeholder="{{achange.change}}" (keyup)="onKey(achange, change.value, 'change')">
+                <span>:</span>
+                <input type="text" #before name="before" placeholder="{{achange.before}}" (keyup)="onKey(achange, before.value, 'before')">
+                <span>=></span>
+                <input type="text" #after name="after" placeholder="{{achange.after}}" (keyup)="onKey(achange, after.value, 'after')">
+                <input type="button" name="remove-ac" value="-" (click)="removeAbilityChange(ability, achange)" *ngIf="ability.achange.length > 1">
+                <input type="button" name="add-ac" value="+" (click)="addAbilityChange(ability)">
+            </div>
+        </div>
+    </div>
+    <input type="button" name="submitButton" value="Submit" (click)="submit()">
+</div>

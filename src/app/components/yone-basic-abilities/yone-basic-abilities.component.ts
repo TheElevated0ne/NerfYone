@@ -16,7 +16,7 @@ export class YoneBasicAbilitiesComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.type === "P") {
-      this.description = "Every second attack he deals magic damage, to prevent you from stacking armor against him. His chances of critical strike are doubled, so with 2 items he acts like very fed ADC."
+      this.description = "Yone uses two swords, one for peeling potatoes, another one for shaving his legs. He uses them alternatly, so you'll never be ready"
     }
     if (this.type === "Q") {
       this.description = "Yone stabs forword, dealing tons of damage. On hit, grants a Stack of Retardness. At 2 stacks Yone dash forward to fuck your mother and knocks you up, dealing tons of damage by the way."
